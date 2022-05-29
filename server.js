@@ -2,19 +2,23 @@
 ==========
 | SERVER |
 ==================================================================================================================================
+
 ? @author:              William J. Horn
 ? @doc-name:            server.js
 ? @doc-created:         05/29/2022
 ? @doc-modified:        05/29/2022
+
 ==================================================================================================================================
 
 ? @doc-info
 ==================
 | ABOUT DOCUMENT |
 ==================================================================================================================================
+
 This program file is responsible for handling the initialization of all back-end functionality and uses the Express.js server
 framework to operate. learn more about Express.js here: https://expressjs.com/
 Database management is handled by the Sequelize ORM library.
+
 ==================================================================================================================================
 
 ? @doc-todo
