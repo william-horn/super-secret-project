@@ -22,7 +22,7 @@ and DELETE requests.
 */
 const router = require('express').Router();
 
-router.use('/', require('./root'));
+router.use('/', require('./home'));
 router.use('/api', require('./api'));
 
 

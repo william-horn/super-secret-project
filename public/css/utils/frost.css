@@ -1,0 +1,386 @@
+/*
+=========================
+| FROST (CSS FRAMEWORK) |
+==================================================================================================================================
+
+? @author:              William J. Horn
+? @doc-name:            frost.css
+? @doc-created:         05/29/2022
+? @doc-modified:        05/29/2022
+
+==================================================================================================================================
+
+? @doc-info
+==================
+| ABOUT DOCUMENT |
+==================================================================================================================================
+
+*****************
+***** FROST *****
+*****************
+
+Frost is a lightweight CSS framework created by William J. Horn with the attempt of making layman-use of CSS much easier
+and cleaner. It's main features are: 
+
+    * Quick margin/padding classes
+    * Easy interaction with flex box
+    * Responsiveness with media query classes
+
+This is an ongoing project and many more features will be added in the future.
+
+==================================================================================================================================
+
+? @doc-todo
+=================
+| DOCUMENT TODO |
+==================================================================================================================================
+
+todo: learn more about flex-grow & flex-shrink to make appropriate utility classes for them
+
+todo: Figure out good strategy for making responsiveness classes
+
+todo: Play with optimizing media query break points for most optimal responsive situations
+
+==================================================================================================================================
+*/
+
+:root {
+    --marginIncrement: 5px;
+    --paddingIncrement: 5px;
+}
+
+.flex-row,
+.flex-row-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.flex-space-around {
+    justify-content: space-around;
+}
+
+.flex-space-even {
+    justify-content: space-evenly;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+.flex-3 { flex: 3; }
+.flex-4 { flex: 4; }
+.flex-5 { flex: 5; }
+.flex-6 { flex: 6; }
+.flex-7 { flex: 7; }
+.flex-grow-01 { flex-grow: 0.1; }
+.flex-grow-02 { flex-grow: 0.2; }
+.flex-grow-03 { flex-grow: 0.3; }
+.flex-grow-04 { flex-grow: 0.4; }
+.flex-grow-05 { flex-grow: 0.5; }
+.flex-grow-06 { flex-grow: 0.6; }
+.flex-grow-07 { flex-grow: 0.7; }
+.flex-grow-08 { flex-grow: 0.8; }
+
+/*
+    * utility: 'fill'
+    The element will fill it's parent container with a given percentage. Using '.fill' by itself
+    will make the element fill it's container with 100% width and height.
+
+    descendants:
+        .fill-wide
+        .fill-tall
+        .fill-half-wide
+        .fill-half-tall
+        .fill-n-wide
+        .fill-n-tall
+        ...
+
+*/
+.fill-wide, 
+.fill {
+    width: 100%;
+}
+
+.fill-tall, 
+.fill {
+    height: 100%;
+}
+
+.fill-three-quarters-wide,
+.fill-three-quarters {
+    width: 75%;
+}
+
+.fill-three-quarters-tall,
+.fill-three-quarters {
+    height: 75%;
+}
+
+.fill-two-thirds-wide,
+.fill-two-thirds {
+    width: 66.66666%;
+}
+
+.fill-two-thirds-tall,
+.fill-two-thirds {
+    height: 66.66666%;
+}
+
+.fill-half-wide, 
+.fill-half {
+    width: 50%;
+}
+
+.fill-half-tall, 
+.fill-half {
+    height: 50%;
+}
+
+.fill-third-wide, 
+.fill-third {
+    width: 33.33333%;
+}
+
+.fill-third-tall, 
+.fill-third {
+    height: 33.33333%;
+}
+
+.fill-fourth-wide, 
+.fill-fourth {
+    width: 25%;
+}
+
+.fill-fourth-tall, 
+.fill-fourth {
+    height: 25%;
+}
+
+/*
+    * utility: 'vertical-view-auto'
+    Provide a general class for displaying vertical content on a page by providing some left and right
+    margin on the sides. This margin will be removed when the screen is < 600px wide
+*/
+.vertical-view {
+    margin: 0 10%;
+}
+
+.center-wide {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/*
+    * utility: 'mg-n'
+    General purpose margin
+
+    descendants:
+        mg-left-n
+        mg-right-n
+        mg-top-n
+        mg-bottom-n
+*/
+/* margin utility classes begin */
+.mg-1-left, .mg-1, .mg-1-all > *, .mg-1-left-all > *            { margin-left:     var(--marginIncrement); }
+.mg-1-right, .mg-1, .mg-1-all > *, .mg-1-right-all > *          { margin-right:    var(--marginIncrement); }
+.mg-1-top, .mg-1, .mg-1-all > *, .mg-1-top-all > *              { margin-top:      var(--marginIncrement); }
+.mg-1-bottom, .mg-1, .mg-1-all > *, .mg-1-bottom-all > *        { margin-bottom:   var(--marginIncrement); }
+
+.mg-2-left, .mg-2, .mg-2-all > *, .mg-2-left-all > *            { margin-left:     calc(var(--marginIncrement)*2); }
+.mg-2-right, .mg-2, .mg-2-all > *, .mg-2-right-all > *          { margin-right:    calc(var(--marginIncrement)*2); }
+.mg-2-top, .mg-2, .mg-2-all > *, .mg-2-top-all > *              { margin-top:      calc(var(--marginIncrement)*2); }
+.mg-2-bottom, .mg-2, .mg-2-all > *, .mg-2-bottom-all > *        { margin-bottom:   calc(var(--marginIncrement)*2); }
+
+.mg-3-left, .mg-3, .mg-3-all > *, .mg-3-left-all > *            { margin-left:     calc(var(--marginIncrement)*3); }
+.mg-3-right, .mg-3, .mg-3-all > *, .mg-3-right-all > *          { margin-right:    calc(var(--marginIncrement)*3); }
+.mg-3-top, .mg-3, .mg-3-all > *, .mg-3-top-all > *              { margin-top:      calc(var(--marginIncrement)*3); }
+.mg-3-bottom, .mg-3, .mg-3-all > *, .mg-3-bottom-all > *        { margin-bottom:   calc(var(--marginIncrement)*3); }
+
+.mg-4-left, .mg-4, .mg-4-all > *, .mg-4-left-all > *            { margin-left:     calc(var(--marginIncrement)*4); }
+.mg-4-right, .mg-4, .mg-4-all > *, .mg-4-right-all > *          { margin-right:    calc(var(--marginIncrement)*4); }
+.mg-4-top, .mg-4, .mg-4-all > *, .mg-4-top-all > *              { margin-top:      calc(var(--marginIncrement)*4); }
+.mg-4-bottom, .mg-4, .mg-4-all > *, .mg-4-bottom-all > *        { margin-bottom:   calc(var(--marginIncrement)*4); }
+
+.mg-5-left, .mg-5, .mg-5-all > *, .mg-5-left-all > *            { margin-left:     calc(var(--marginIncrement)*5); }
+.mg-5-right, .mg-5, .mg-5-all > *, .mg-5-right-all > *          { margin-right:    calc(var(--marginIncrement)*5); }
+.mg-5-top, .mg-5, .mg-5-all > *, .mg-5-top-all > *              { margin-top:      calc(var(--marginIncrement)*5); }
+.mg-5-bottom, .mg-5, .mg-5-all > *, .mg-5-bottom-all > *        { margin-bottom:   calc(var(--marginIncrement)*5); }
+
+.mg-6-left, .mg-6, .mg-6-all > *, .mg-6-left-all > *            { margin-left:     calc(var(--marginIncrement)*6); }
+.mg-6-right, .mg-6, .mg-6-all > *, .mg-6-right-all > *          { margin-right:    calc(var(--marginIncrement)*6); }
+.mg-6-top, .mg-6, .mg-6-all > *, .mg-6-top-all > *              { margin-top:      calc(var(--marginIncrement)*6); }
+.mg-6-bottom, .mg-6, .mg-6-all > *, .mg-6-bottom-all > *        { margin-bottom:   calc(var(--marginIncrement)*6); }
+
+.mg-7-left, .mg-7, .mg-7-all > *, .mg-7-left-all > *            { margin-left:     calc(var(--marginIncrement)*7); }
+.mg-7-right, .mg-7, .mg-7-all > *, .mg-7-right-all > *          { margin-right:    calc(var(--marginIncrement)*7); }
+.mg-7-top, .mg-7, .mg-7-all > *, .mg-7-top-all > *              { margin-top:      calc(var(--marginIncrement)*7); }
+.mg-7-bottom, .mg-7, .mg-7-all > *, .mg-7-bottom-all > *        { margin-bottom:   calc(var(--marginIncrement)*7); }
+
+.mg-8-left, .mg-8, .mg-8-all > *, .mg-8-left-all > *            { margin-left:     calc(var(--marginIncrement)*8); }
+.mg-8-right, .mg-8, .mg-8-all > *, .mg-8-right-all > *          { margin-right:    calc(var(--marginIncrement)*8); }
+.mg-8-top, .mg-8, .mg-8-all > *, .mg-8-top-all > *              { margin-top:      calc(var(--marginIncrement)*8); }
+.mg-8-bottom, .mg-8, .mg-8-all > *, .mg-8-bottom-all > *        { margin-bottom:   calc(var(--marginIncrement)*8); }
+
+.mg-9-left, .mg-9, .mg-9-all > *, .mg-9-left-all > *            { margin-left:     calc(var(--marginIncrement)*9); }
+.mg-9-right, .mg-9, .mg-9-all > *, .mg-9-right-all > *          { margin-right:    calc(var(--marginIncrement)*9); }
+.mg-9-top, .mg-9, .mg-9-all > *, .mg-9-top-all > *              { margin-top:      calc(var(--marginIncrement)*9); }
+.mg-9-bottom, .mg-9, .mg-9-all > *, .mg-9-bottom-all > *        { margin-bottom:   calc(var(--marginIncrement)*9); }
+
+.mg-10-left, .mg-10, .mg-10-all > *, .mg-10-left-all > *        { margin-left:     calc(var(--marginIncrement)*10); }
+.mg-10-right, .mg-10, .mg-10-all > *, .mg-10-right-all > *      { margin-right:    calc(var(--marginIncrement)*10); }
+.mg-10-top, .mg-10, .mg-10-all > *, .mg-10-top-all > *          { margin-top:      calc(var(--marginIncrement)*10); }
+.mg-10-bottom, .mg-10, .mg-10-all > *, .mg-10-bottom-all > *    { margin-bottom:   calc(var(--marginIncrement)*10); }
+/* margin utility classes end */
+
+
+/*
+    * utility: 'pd-n'
+    General purpose padding
+
+    descendants:
+        pd-left-n
+        pd-right-n
+        pd-top-n
+        pd-bottom-n
+*/
+/* padding utility classes begin */
+.pd-1-left, .pd-1, .pd-1-all > *, .pd-1-left-all > *            { padding-left:     var(--paddingIncrement); }
+.pd-1-right, .pd-1, .pd-1-all > *, .pd-1-right-all > *          { padding-right:    var(--paddingIncrement); }
+.pd-1-top, .pd-1, .pd-1-all > *, .pd-1-top-all > *              { padding-top:      var(--paddingIncrement); }
+.pd-1-bottom, .pd-1, .pd-1-all > *, .pd-1-bottom-all > *        { padding-bottom:   var(--paddingIncrement); }
+
+.pd-2-left, .pd-2, .pd-2-all > *, .pd-2-left-all > *            { padding-left:     calc(var(--paddingIncrement)*2); }
+.pd-2-right, .pd-2, .pd-2-all > *, .pd-2-right-all > *          { padding-right:    calc(var(--paddingIncrement)*2); }
+.pd-2-top, .pd-2, .pd-2-all > *, .pd-2-top-all > *              { padding-top:      calc(var(--paddingIncrement)*2); }
+.pd-2-bottom, .pd-2, .pd-2-all > *, .pd-2-bottom-all > *        { padding-bottom:   calc(var(--paddingIncrement)*2); }
+
+.pd-3-left, .pd-3, .pd-3-all > *, .pd-3-left-all > *            { padding-left:     calc(var(--paddingIncrement)*3); }
+.pd-3-right, .pd-3, .pd-3-all > *, .pd-3-right-all > *          { padding-right:    calc(var(--paddingIncrement)*3); }
+.pd-3-top, .pd-3, .pd-3-all > *, .pd-3-top-all > *              { padding-top:      calc(var(--paddingIncrement)*3); }
+.pd-3-bottom, .pd-3, .pd-3-all > *, .pd-3-bottom-all > *        { padding-bottom:   calc(var(--paddingIncrement)*3); }
+
+.pd-4-left, .pd-4, .pd-4-all > *, .pd-4-left-all > *            { padding-left:     calc(var(--paddingIncrement)*4); }
+.pd-4-right, .pd-4, .pd-4-all > *, .pd-4-right-all > *          { padding-right:    calc(var(--paddingIncrement)*4); }
+.pd-4-top, .pd-4, .pd-4-all > *, .pd-4-top-all > *              { padding-top:      calc(var(--paddingIncrement)*4); }
+.pd-4-bottom, .pd-4, .pd-4-all > *, .pd-4-bottom-all > *        { padding-bottom:   calc(var(--paddingIncrement)*4); }
+
+.pd-5-left, .pd-5, .pd-5-all > *, .pd-5-left-all > *            { padding-left:     calc(var(--paddingIncrement)*5); }
+.pd-5-right, .pd-5, .pd-5-all > *, .pd-5-right-all > *          { padding-right:    calc(var(--paddingIncrement)*5); }
+.pd-5-top, .pd-5, .pd-5-all > *, .pd-5-top-all > *              { padding-top:      calc(var(--paddingIncrement)*5); }
+.pd-5-bottom, .pd-5, .pd-5-all > *, .pd-5-bottom-all > *        { padding-bottom:   calc(var(--paddingIncrement)*5); }
+
+.pd-6-left, .pd-6, .pd-6-all > *, .pd-6-left-all > *            { padding-left:     calc(var(--paddingIncrement)*6); }
+.pd-6-right, .pd-6, .pd-6-all > *, .pd-6-right-all > *          { padding-right:    calc(var(--paddingIncrement)*6); }
+.pd-6-top, .pd-6, .pd-6-all > *, .pd-6-top-all > *              { padding-top:      calc(var(--paddingIncrement)*6); }
+.pd-6-bottom, .pd-6, .pd-6-all > *, .pd-6-bottom-all > *        { padding-bottom:   calc(var(--paddingIncrement)*6); }
+
+.pd-7-left, .pd-7, .pd-7-all > *, .pd-7-left-all > *            { padding-left:     calc(var(--paddingIncrement)*7); }
+.pd-7-right, .pd-7, .pd-7-all > *, .pd-7-right-all > *          { padding-right:    calc(var(--paddingIncrement)*7); }
+.pd-7-top, .pd-7, .pd-7-all > *, .pd-7-top-all > *              { padding-top:      calc(var(--paddingIncrement)*7); }
+.pd-7-bottom, .pd-7, .pd-7-all > *, .pd-7-bottom-all > *        { padding-bottom:   calc(var(--paddingIncrement)*7); }
+
+.pd-8-left, .pd-8, .pd-8-all > *, .pd-8-left-all > *            { padding-left:     calc(var(--paddingIncrement)*8); }
+.pd-8-right, .pd-8, .pd-8-all > *, .pd-8-right-all > *          { padding-right:    calc(var(--paddingIncrement)*8); }
+.pd-8-top, .pd-8, .pd-8-all > *, .pd-8-top-all > *              { padding-top:      calc(var(--paddingIncrement)*8); }
+.pd-8-bottom, .pd-8, .pd-8-all > *, .pd-8-bottom-all > *        { padding-bottom:   calc(var(--paddingIncrement)*8); }
+
+.pd-9-left, .pd-9, .pd-9-all > *, .pd-9-left-all > *            { padding-left:     calc(var(--paddingIncrement)*9); }
+.pd-9-right, .pd-9, .pd-9-all > *, .pd-9-right-all > *          { padding-right:    calc(var(--paddingIncrement)*9); }
+.pd-9-top, .pd-9, .pd-9-all > *, .pd-9-top-all > *              { padding-top:      calc(var(--paddingIncrement)*9); }
+.pd-9-bottom, .pd-9, .pd-9-all > *, .pd-9-bottom-all > *        { padding-bottom:   calc(var(--paddingIncrement)*9); }
+
+.pd-10-left, .pd-10, .pd-10-all > *, .pd-10-left-all > *        { padding-left:     calc(var(--paddingIncrement)*10); }
+.pd-10-right, .pd-10, .pd-10-all > *, .pd-10-right-all > *      { padding-right:    calc(var(--paddingIncrement)*10); }
+.pd-10-top, .pd-10, .pd-10-all > *, .pd-10-top-all > *          { padding-top:      calc(var(--paddingIncrement)*10); }
+.pd-10-bottom, .pd-10, .pd-10-all > *, .pd-10-bottom-all > *    { padding-bottom:   calc(var(--paddingIncrement)*10); }
+/* padding utility classes end */
+
+
+/* x-small screens screens */
+@media screen and (max-width: 500px) {
+
+}
+
+
+/* small screens */
+@media screen and (max-width: 760px) {
+
+    .fit-small-screen * {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .flex-row-wrap.fit-small-screen {
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* EXPERIMENTAL BEGINS */
+    .vertical-view.fit-small-screen {
+        margin: 0;
+    }
+
+    .fill-three-quarters.fit-small-screen {
+        width: 100%;
+        height: 100%;
+    }
+
+    .fill-three-quarters-wide.fit-small-screen {
+        width: 100%;
+    }
+
+    .fill-three-quarters-tall.fit-small-screen {
+        height: 100%;
+    }
+    /* EXPERIMENTAL ENDS */
+}
+
+/* medium screens */
+@media screen and (max-width: 1000px) {
+    .vertical-view.fit-medium-screen {
+        margin: 0;
+    }
+}
+
+/* large screens */
+@media screen and (max-width: 1920px) {
+    .vertical-view.fit-large-screen {
+        margin: 0;
+    }
+}
