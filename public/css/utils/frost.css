@@ -50,12 +50,21 @@ todo: Play with optimizing media query break points for most optimal responsive 
 }
 
 .flex-row,
-.flex-row-wrap {
+.flex-row-wrap,
+.flex-column-wrap,
+.flex-column {
     display: flex;
     flex-direction: row;
 }
 
-.flex-row-wrap {
+.flex-column-wrap,
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row-wrap,
+.flex-wrap,
+.flex-column-wrap {
     flex-wrap: wrap;
 }
 
@@ -87,6 +96,15 @@ todo: Play with optimizing media query break points for most optimal responsive 
     align-items: center;
 }
 
+.flex-align-start {
+    align-items: flex-start;
+}
+
+.flex-align-end {
+    align-items: flex-end;
+}
+
+/* todo: research more about flexbox and finish these later */
 .flex-1 { flex: 1; }
 .flex-2 { flex: 2; }
 .flex-3 { flex: 3; }
@@ -341,32 +359,33 @@ todo: Play with optimizing media query break points for most optimal responsive 
 
     .fit-small-screen * {
         text-align: center;
-        margin-left: 0;
-        margin-right: 0;
+        /* margin-left: 0;
+        margin-right: 0; */
     }
 
-    .flex-row-wrap.fit-small-screen {
+    /* .flex-row-wrap.fit-small-screen {
         justify-content: center;
         margin-left: 0;
         margin-right: 0;
-    }
+    } */
 
     /* EXPERIMENTAL BEGINS */
     .vertical-view.fit-small-screen {
         margin: 0;
     }
 
-    .fill-three-quarters.fit-small-screen {
-        width: 100%;
+    .fill-three-quarters-tall.fit-small-screen,
+    .fill-half-tall.fit-small-screen,
+    .fill-three-quarters,
+    .fill-half {
         height: 100%;
     }
 
-    .fill-three-quarters-wide.fit-small-screen {
+    .fill-three-quarters-wide.fit-small-screen,
+    .fill-half-wide.fit-small-screen,
+    .fill-three-quarters,
+    .fill-half {
         width: 100%;
-    }
-
-    .fill-three-quarters-tall.fit-small-screen {
-        height: 100%;
     }
     /* EXPERIMENTAL ENDS */
 }

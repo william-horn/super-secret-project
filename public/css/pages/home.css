@@ -1,0 +1,116 @@
+
+/* ------------------- */
+/* Global Declarations */
+/* ------------------- */
+* {
+    color: var(--themeSecondary);
+}
+
+body {
+    background-color: var(--themePrimary);
+}
+
+p {
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+header {
+    position: relative;
+}
+
+/* all nav bar styling -- there should only be one nav bar */
+nav {
+    background-color: var(--themeFour);
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 10px 20px;
+}
+
+nav div > a {
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--themeSix);
+    border-radius: 20px;
+}
+
+/* --------------- */
+/* Utility Classes */
+/* --------------- */
+/* Text config begins */
+.main-title,
+.sub-title {
+    font-size: 3rem;
+    font-family: 'Raleway';
+    letter-spacing: 2px;
+    color: var(--themeThree);
+    text-shadow: 0 0 5px #624871;
+}
+
+.sub-title {
+    letter-spacing: 1px;
+}
+
+.cursive-font {
+    font-family: 'Dancing Script';
+}
+/* Text config ends */
+
+/* ------------------- */
+/* Conjunction Classes */
+/* ------------------- */
+.main-title span {
+    color: var(--themePrimary);
+    font-family: monospace;
+}
+
+/* --------------- */
+/* Styling Classes */
+/* --------------- */
+/* Image config begins */
+.pfp {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 20px #d1a6ff;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+.pfp-flowers {
+    position: absolute;
+    width: 120%;
+    height: 145px;
+    left: -10%;
+    bottom: -30px;
+}
+
+.img-container {
+    position: relative;
+}
+/* Image config ends */
+
+.olive-name {
+    /* border-bottom: 2px solid; */
+}
+
+.thank-you-title {
+    color: var(--themeSecondary);
+}
+
+.main-container {
+    background-color: var(--themeFive); /* #352a43 style-1: #705b8d; */
+    min-height: 100vh;
+}
+
+.header-stripe {
+    background-color: var(--themeFour);
+    width: 100%;
+    left: 0;
+    height: 100px;
+    top: calc(50% - 60px);
+    position: absolute;
+}

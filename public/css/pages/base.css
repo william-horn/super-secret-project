@@ -86,7 +86,7 @@ Coming soon
 }
 
 html {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 p, a, li {
@@ -108,48 +108,8 @@ li > * {
     height: 100%;
 }
 
-body {
-    background-color: var(--basePageBackgroundColor);
-}
-
-h1, h2, h3, 
-h4, h5, h6 {
-    text-align: center;
-    color: var(--baseHeadingTextColor);
-    padding-bottom: 10px;
-    font-size: calc(var(--baseFontSize) + 0.4rem);
-}
-
-h1 {
-    font-size: calc(var(--baseFontSize) + 1.6rem);
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
-
-button {
-    border: none;
-    padding: 5px 10px;
-    background-color: var(--baseButtonBackgroundColor);
-    color: var(--baseButtonTextColor);
-    font-size: var(--baseFontSize);
-    font-weight: 600;
-}
-
-label {
-    font-size: 1.4rem;
-}
-
-input {
-    border: none;
-    color: var(--baseInputTextColor);
-    background-color: var(--baseInputBackgroundColor);
-    font-weight: 900;
-    outline: none;
-    padding: 5px;
-    font-size: var(--baseFontSize);
-    width: 100%;
-}
-
-::placeholder {
-    color: #dcdcdc;
+span {
+    font-weight: inherit;
+    color: inherit;
+    font-family: inherit;
 }

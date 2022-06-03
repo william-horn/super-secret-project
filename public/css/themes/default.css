@@ -1,10 +1,15 @@
 
-/* :root {
-    --themePrimary
+:root {
+    --themePrimary: #aa9abe; /* background color */
+    --themeSecondary: white; /* regular text color */
+    --themeThree: #f4d5ff; /* heading text color */
+    --themeFour: #31253e; /* third background color */
+    --themeFive: #8679a3; /* secondary background color */
+    --themeSix: #793e5a; /* button background color */
+    /* --themePrimary
     --themeSecondary
     --themeThree
     --themeFour
     --themeFive
-    --themeSix
-} */
-
+    --themeSix */
+}

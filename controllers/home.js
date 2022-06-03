@@ -3,7 +3,7 @@ const axios = require('axios');
 const router = require('express').Router();
 
 const GET_root = (req, res) => {
-    res.status(200).json('Client connected');
+    res.status(200).render('home');
 }
 
 const POST_root = (req, res) => {}
