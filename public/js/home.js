@@ -1,22 +1,28 @@
 
-const navbarEl = $('nav div');
 const navbar = {
-    readmeButton: navbarEl.children('a[href="#readme"]'),
-    publicPostButton: navbarEl.children('a[href="#posts"]'),
-    loginButton: navbarEl.children('a[href="#login"]'),
-    themesButton: navbarEl.children('a[href="#themes"]'),
+    readmeButton: $('a[href="#readme"]'),
+    publicPostButton: $('a[href="#posts"]'),
+    loginButton: $('a[href="#login"]'),
+    themesButton: $('a[href="#themes"]'),
 }
 
 const themes = [
-    '../themes/default.css',
-    '../themes/black-and-while.css',
-    '../themes/deep-green.css'
+    './css/themes/default.css',
+    './css/themes/black-and-white.css',
+    './css/themes/deep-green.css',
+    ' '
 ]
 
-$(navbar.themesButton).click(() => {
-    console.log('click');
-    $('#theme-stylesheet').attr('href', themes[Math.floor(Math.random()*(themes.length - 1))]);
-});
+const getCycleClick = eventFunc => {
+    let index = 0;
+    return () => {
+        eventFunc(index);
+        index++;
+    }
+}
 
+const getNextTheme = getCycleClick(index => $('#theme-stylesheet').attr('href', themes[(index + 1)%themes.length]));
+navbar.themesButton.click(getNextTheme);
 
+console.log('finished');
 
