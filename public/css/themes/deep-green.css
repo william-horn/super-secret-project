@@ -16,7 +16,7 @@
     --themeSeven: #d298b3; /* button text color */
     --themeEight: #000000; /* button selected background color */
     --themeNine: var(--themeSeven); /* button selected text color */
-    --themeTen: #6b5e89; /* fourth background color */
+    --themeTen: var(--themeSix); /* fourth background color */
 
     /* --themePrimary
     --themeSecondary

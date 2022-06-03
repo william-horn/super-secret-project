@@ -24,7 +24,9 @@ local database
 const Sequelize = require('sequelize');
 const ENV = process.env;
 
-const sequelizeConnection = ENV.JAWSDB_URL || new Sequelize(
+const sequelizeConnection = ENV.JAWSDB_URL 
+    ? new Sequelize(ENV.JAWSDB_URL) 
+    : new Sequelize(
     ENV.DB_NAME,
     ENV.DB_USER,
     ENV.DB_PW,
@@ -34,6 +36,6 @@ const sequelizeConnection = ENV.JAWSDB_URL || new Sequelize(
         dialect: 'mysql'
     }
 );
-    
 
+console.log('sequelize connection:', sequelizeConnection);
 module.exports = sequelizeConnection;
