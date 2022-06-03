@@ -1,11 +1,19 @@
 
 :root {
+    --themeBackgroundImage: none;
+    --themePrimaryBoxShadow: 0 0 10px black;
+
+    --pfpFilter: grayscale(0);
+
     --themePrimary: #aa9abe; /* background color */
     --themeSecondary: white; /* regular text color */
     --themeThree: #f4d5ff; /* heading text color */
     --themeFour: #31253e; /* third background color */
     --themeFive: #8679a3; /* secondary background color */
     --themeSix: #793e5a; /* button background color */
+    --themeSeven: #d298b3; /* button text color */
+    --themeEight: #000000; /* button selected background color */
+    --themeNine: var(--themeSeven); /* button selected text color */
     /* --themePrimary
     --themeSecondary
     --themeThree

@@ -22,7 +22,7 @@ This program file is responsible for storing all responsive messages for develop
 
 const messages = {
 
-    validationMessages: {}
+    validationMessages: {},
     errorMessages: {},
     successMessages: {},
     warningMessages: {},

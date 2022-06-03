@@ -1,0 +1,20 @@
+
+:root {
+    --themeBackgroundImage: url('../../imgs/background-themes/black-and-white.png');
+    --themePrimaryBoxShadow: 0 0 10px black;
+
+    --pfpFilter: grayscale(1);
+
+    --themePrimary: #F1F1F1;
+    --themeSecondary: #A6A6A6;
+    --themeThree: #CDCDCD;
+    --themeFour: #0E0E0E;
+    --themeFive: #232323;
+    --themeSix: #1B1B1B;
+
+    /* todo: NEW THEMES! CHANGE THESE! */
+    --themeSeven: #d298b3; /* button text color */
+    --themeEight: #000000; /* button selected background color */
+    --themeNine: var(--themeSeven); /* button selected text color */
+}
+

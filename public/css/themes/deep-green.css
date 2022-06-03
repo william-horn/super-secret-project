@@ -1,0 +1,26 @@
+
+:root {
+    --themeBackgroundImage: url('../../imgs/background-themes/deep-green.png');
+    --themePrimaryBoxShadow: 0 0 10px black;
+    
+    --pfpFilter: grayscale(0);
+
+    --themePrimary: #dcf9ff; /* background color */
+    --themeSecondary: #89b0ba; /* regular text color */
+    --themeThree: #b7d4e3; /* heading text color */
+    --themeFour: #021415; /* third background color */
+    --themeFive: #122930; /* secondary background color */
+    --themeSix: #04232e; /* button background color */
+
+    /* todo: NEW THEMES! CHANGE THESE! */
+    --themeSeven: #d298b3; /* button text color */
+    --themeEight: #000000; /* button selected background color */
+    --themeNine: var(--themeSeven); /* button selected text color */
+
+    /* --themePrimary
+    --themeSecondary
+    --themeThree
+    --themeFour
+    --themeFive
+    --themeSix */
+}

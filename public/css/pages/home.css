@@ -8,6 +8,8 @@
 
 body {
     background-color: var(--themePrimary);
+    background-image: var(--themeBackgroundImage);
+    background-size: cover;
 }
 
 p {
@@ -33,8 +35,6 @@ nav {
 nav div > a {
     padding: 10px;
     margin: 5px;
-    background-color: var(--themeSix);
-    border-radius: 20px;
 }
 
 /* --------------- */
@@ -57,6 +57,17 @@ nav div > a {
 .cursive-font {
     font-family: 'Dancing Script';
 }
+
+.button {
+    background-color: var(--themeSix);
+    color: var(--themeSeven);
+    border-radius: 20px;
+}
+
+.button:hover {
+    background-color: var(--themeEight);
+    color: var(--themeNine);
+}
 /* Text config ends */
 
 /* ------------------- */
@@ -72,16 +83,19 @@ nav div > a {
 /* --------------- */
 /* Image config begins */
 .pfp {
+    filter: var(--pfpFilter);
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    box-shadow: 0 0 20px #d1a6ff;
-    border: 4px solid white;
+    box-shadow: 0 0 20px var(--themeFour); /* prev: #d1a6ff; */
+    border: 4px solid var(--themeFour);
     object-fit: cover;
 }
 
 .pfp-flowers {
+    z-index: 2;
     position: absolute;
+    filter: var(--pfpFilter);
     width: 120%;
     height: 145px;
     left: -10%;
@@ -104,6 +118,7 @@ nav div > a {
 .main-container {
     background-color: var(--themeFive); /* #352a43 style-1: #705b8d; */
     min-height: 100vh;
+    box-shadow: var(--themePrimaryBoxShadow);
 }
 
 .header-stripe {
