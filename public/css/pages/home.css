@@ -43,11 +43,11 @@ nav div > a {
 /* Text config begins */
 .main-title,
 .sub-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: 'Raleway';
     letter-spacing: 2px;
     color: var(--themeThree);
-    text-shadow: 0 0 5px #624871;
+    /* text-shadow: 0 0 5px #624871; */
 }
 
 .sub-title {
@@ -58,15 +58,68 @@ nav div > a {
     font-family: 'Dancing Script';
 }
 
+.bg-theme-primary {
+    background-color: var(--themePrimary);
+}
+
+.bg-theme-secondary {
+    background-color: var(--themeSecondary);
+}
+
+.bg-theme-three {
+    background-color: var(--themeThree);
+}
+
+.bg-theme-four {
+    background-color: var(--themeFour);
+}
+
+.bg-theme-five {
+    background-color: var(--themeFive);
+}
+
+.bg-theme-six {
+    background-color: var(--themeSix);
+}
+
+.bg-theme-seven {
+    background-color: var(--themeSeven);
+}
+
+.bg-theme-eight {
+    background-color: var(--themeEight);
+}
+
+.bg-theme-nine {
+    background-color: var(--themeNine);
+}
+
+.bg-theme-ten {
+    background-color: var(--themeTen);
+}
+
+.text-article *,
+.text-article-center * {
+    letter-spacing: 1px;
+    line-height: 2.5rem;
+}
+
+.text-article-center * {
+    text-align: center;
+}
+
+/* todo: add cool background sliding animation for button hovers */
 .button {
     background-color: var(--themeSix);
     color: var(--themeSeven);
     border-radius: 20px;
+    transition: color 0.2s, background-color 0.2s;
 }
 
 .button:hover {
     background-color: var(--themeEight);
     color: var(--themeNine);
+    transition: color 0.2s, background-color 0.2s;
 }
 /* Text config ends */
 
@@ -74,13 +127,21 @@ nav div > a {
 /* Conjunction Classes */
 /* ------------------- */
 .main-title span {
-    color: var(--themePrimary);
+    /* color: var(--themePrimary); */
     font-family: monospace;
+    font-weight: 100;
 }
 
 /* --------------- */
 /* Styling Classes */
 /* --------------- */
+/* Main content container */
+.main-container {
+    background-color: var(--themeFive); /* #352a43 style-1: #705b8d; */
+    min-height: 100vh;
+    box-shadow: var(--themePrimaryBoxShadow);
+}
+
 /* Image config begins */
 .pfp {
     filter: var(--pfpFilter);
@@ -107,19 +168,25 @@ nav div > a {
 }
 /* Image config ends */
 
+/* Special header text begins */
 .olive-name {
+    z-index: 3;
+    font-size: 3rem;
+
+    color: var(--themeSecondary);
+    font-weight: 900;
+    text-shadow: 0 0 30px #000000;
+    font-family: 'Dancing Script';
+    /* box-shadow: 0 0 50px white; */
+    border-radius: 20px;
     /* border-bottom: 2px solid; */
 }
 
 .thank-you-title {
     color: var(--themeSecondary);
+    font-size: 3rem;
 }
-
-.main-container {
-    background-color: var(--themeFive); /* #352a43 style-1: #705b8d; */
-    min-height: 100vh;
-    box-shadow: var(--themePrimaryBoxShadow);
-}
+/* Special header text ends */
 
 .header-stripe {
     background-color: var(--themeFour);

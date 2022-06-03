@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="./css/pages/home.css">
 
 
-<div class="main-container center-wide fill-half-wide fit-small-screen">
+<main class="main-container center-wide fill-half-wide fit-small-screen">
 
     {{!-- Main page header --}}
     <header class="pd-3">
@@ -12,25 +12,38 @@
         <div class="flex-column flex-align-center">
             <p class="main-title thank-you-title cursive-font mg-2-bottom">Thank You</p>
             <div class="img-container">
-                <img class="pfp-flowers" src="./imgs/flower-circle-3.png" alt="">
-                <img class="pfp" src="./imgs/oliveboss-2.png" alt="">
+                <img class="pfp-flowers" src="./imgs/decorative/pfp-flowers.png" alt="">
+                <img class="pfp" src="./imgs/icons/olive-pfp-1.png" alt="">
             </div>
-            <p class="olive-name cursive-font main-title mg-6-top"><span>~{</span> Olive <span>}~</span></p>
+            <p class="olive-name cursive-font main-title mg-6-top"><span>{</span> Olive <span>}</span></p>
         </div>
     </header>
 
     {{!-- Main page navigation bar --}}
     <nav class="mg-5-top">
         <div class="flex-row-wrap flex-center">
-            <a class="button" href="#about">README.md</a>
-            <a class="button" href="#technical">Public_Posts.sql</a>
+            <a class="button" href="#readme">README.md</a>
+            <a class="button" href="#posts">Public_Posts.sql</a>
             <a class="button" href="#login">Login.js</a>
+            <a class="button" href="#login">Themes.json</a>
         </div>
     </nav>
 
     {{!-- Main page content body --}}
-    <div>
+    <div class="flex-column-wrap flex-align-center pd-4 mg-6-top">
+        <div id="readme" class="fill-three-quarters flex-column-wrap flex-align-center">
+            <h2 class="sub-title text-center mg-5-bottom">README.md</h2>
+            <div class="bg-theme-ten pd-3 text-article-center">
+                <p class="mg-3-bottom">
+                    Welcome future-goer!
+                </p>
+                <p>
+                    It seems you have stumbled across a fan-made fan page for one the coolest human beings on the planet. Please enjoy your stay.
+                </p>
+            </div>
+        </div>
     </div>
-</div>
+</main>
 
 
+<script src="./js/home.js"></script>
