@@ -37,5 +37,4 @@ const sequelizeConnection = ENV.JAWSDB_URL
     }
 );
 
-console.log('sequelize connection:', sequelizeConnection);
 module.exports = sequelizeConnection;

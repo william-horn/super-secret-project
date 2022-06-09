@@ -54,6 +54,10 @@ nav div > a {
     letter-spacing: 1px;
 }
 
+.img-relative {
+    position: relative;
+}
+
 .cursive-font {
     font-family: 'Dancing Script';
 }
@@ -162,10 +166,6 @@ nav div > a {
     left: -10%;
     bottom: -30px;
 }
-
-.img-container {
-    position: relative;
-}
 /* Image config ends */
 
 /* Special header text begins */
@@ -175,7 +175,7 @@ nav div > a {
 
     color: var(--themeSecondary);
     font-weight: 900;
-    text-shadow: 0 0 30px #000000;
+    /* text-shadow: 0 0 30px #000000; */
     font-family: 'Dancing Script';
     /* box-shadow: 0 0 50px white; */
     border-radius: 20px;

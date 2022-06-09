@@ -47,6 +47,8 @@ todo: Play with optimizing media query break points for most optimal responsive 
 :root {
     --marginIncrement: 5px;
     --paddingIncrement: 5px;
+
+    --fontSizeIncrement: 0.4rem;
 }
 
 .flex-row,
@@ -196,8 +198,66 @@ todo: Play with optimizing media query break points for most optimal responsive 
     height: 25%;
 }
 
+
+/* todo: replace fill-X classes with these new column classes eventually */
+.col-1 {
+    width: calc(100%/12);
+}
+
+.col-2 {
+    width: calc(100%/12*2);
+}
+
+.col-3 {
+    width: calc(100%/12*3);
+}
+
+.col-4 {
+    width: calc(100%/12*4);
+}
+
+.col-5 {
+    width: calc(100%/12*5);
+}
+
+.col-6 {
+    width: calc(100%/12*6);
+}
+
+.col-7 {
+    width: calc(100%/12*7);
+}
+
+.col-8 {
+    width: calc(100%/12*8);
+}
+
+.col-9 {
+    width: calc(100%/12*9);
+}
+
+.col-10 {
+    width: calc(100%/12*10);
+}
+
+.col-11 {
+    width: calc(100%/12*11);
+}
+
+.col-12,
+.fill-wide,
+.fill {
+    width: 100%;
+}
+
+.fill-tall,
+.fill {
+    height: 100%;
+}
+
+
 /*
-    * utility: 'vertical-view-auto'
+    * utility: 'vertical-view'
     Provide a general class for displaying vertical content on a page by providing some left and right
     margin on the sides. This margin will be removed when the screen is < 600px wide
 */
@@ -220,6 +280,48 @@ todo: Play with optimizing media query break points for most optimal responsive 
 
 .text-right {
     text-align: right;
+}
+
+/* * text sizing */
+
+.text-size-1 {
+    font-size: calc(var(--fontSizeIncrement));
+}
+
+.text-size-2 {
+    font-size: calc(var(--fontSizeIncrement)*2);
+}
+
+.text-size-3 {
+    font-size: calc(var(--fontSizeIncrement)*3);
+}
+
+.text-size-4 {
+    font-size: calc(var(--fontSizeIncrement)*4);
+}
+
+.text-size-5 {
+    font-size: calc(var(--fontSizeIncrement)*5);
+}
+
+.text-size-6 {
+    font-size: calc(var(--fontSizeIncrement)*6);
+}
+
+.text-size-7 {
+    font-size: calc(var(--fontSizeIncrement)*7);
+}
+
+.text-size-8 {
+    font-size: calc(var(--fontSizeIncrement)*8);
+}
+
+.text-size-9 {
+    font-size: calc(var(--fontSizeIncrement)*9);
+}
+
+.text-size-10 {
+    font-size: calc(var(--fontSizeIncrement)*10);
 }
 
 /*

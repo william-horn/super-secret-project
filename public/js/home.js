@@ -21,8 +21,6 @@ const getCycleClick = eventFunc => {
     }
 }
 
-const getNextTheme = getCycleClick(index => $('#theme-stylesheet').attr('href', themes[(index + 1)%themes.length]));
-navbar.themesButton.click(getNextTheme);
+navbar.themesButton.click(getCycleClick(index => $('#theme-stylesheet').attr('href', themes[(index + 1)%themes.length])));
 
-console.log('finished');
 
